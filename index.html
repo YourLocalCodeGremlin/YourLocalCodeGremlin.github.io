@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
         .tab {
             overflow: hidden;
             border: 0px solid;
-            background-color: #6b92aa;
+            background: #6b92aa;
             width: 100%;
+            top: 0px;
+            position: sticky;
         }
 
         .tab button {
             font-family: 'Times New Roman', Times, serif;
-            background-color: #6b92aa;
+            background: #6b92aa;
             border: 0px solid;
             float: center;
             outline: none;
@@ -22,7 +24,7 @@
         }
 
         .tab button.active {
-            background-color: #98b9cd;
+            background: #98b9cd;
         }
 
         .pageHead {
@@ -30,9 +32,17 @@
             font-weight: bold;
             font-size: 30px;
             text-align: center;
-            padding: 10px;
+            padding-top: 10px;
         }
-    </style>
+
+        ul.pageIndex {
+          list-style-type: disc;
+          padding-left: 20%;
+          padding-right: 20%;
+          background: #b3d3cf;
+          width: 60%;
+        }
+  </style>
 </head>
 
 <!-- Tab bar -->
@@ -45,19 +55,69 @@
   <!-- Home tab content -->
   <div id="Home" class="tabcontent">
     <div class="pageHead">Home</div>
-    <body>
-        
+    <body style="padding-left: 20px; padding-right: 20px">
+      <h3 style="text-align: center">Welcome to my Project Page!</h3>
+      <p style="padding-left: 20px; padding-right: 20px; text-align: center">
+        I'm Tessa Chen, an amateur programmer and origami enthusiast. This page is a compilations of the programs I've published 
+        and instructions on how to fold the origami forms that I've invented. Click the tabs above to choose a category to view.
+      </p>
     </body>
   </div>
   
   <!-- Programs tab content -->
   <div id="Programs" class="tabcontent">
     <div class="pageHead">Programs</div>
+    <ul class="pageIndex">
+      <li>Test 1</li>
+      <li>Test 2</li>
+      <li>Test 3</li>
+    </ul>
+    <body style="padding: 20px">
+        <h3 style="text-align: center">The Incorrect Quote Generator</h3><a name="incorrect_quote_generator"></a>
+        <p>The Incorrect Quote Generator is a program hosted on <a href="https://perchance.org">Perchance</a>, a website where anyone can program and
+        host randomized generators for free, intended to take user-inputted names and place them into a dialogue-based joke similar to a game of
+        mad-libs.</p>
+        <p>It was made using a mix of javascript, html, and Perchance's unique programming language. I personally programmed every part of
+          it, including user-suggested additions such as a function to shuffle the names around within the current joke (or, since the jokes are 
+          all dialogue-based scenarios that purposely missattribute certain quotes to certain poeple, "incorrect quote") and a button that 
+          automatically copies the current joke to the user's clipboard. Most of the jokes are user-suggested additions which I still add to this day.</p> 
+        <p>I don't remember exactly when I published the Incorrect Quote Generator, nor is that record readily available, but I recall making it 
+          some time in the summer of 2021. After its publishing, it rapidly gained far more regular users than I expected and is currently known 
+          as the second most popular page on the site (seconded only by the welcome page). As of writing this (April 8th, 2023)  it has more than 
+          2.5 million views.</p>
+        <p>Below here is an embeded version of the Incorrect Quote Generator in case you're interested in using it. However, if you'd like to
+          see the page itself, it is located <a href="https://perchance.org/incorrect-quote-generator">here.</a></p>
+        <iframe src="https://null.perchance.org/incorrect-quote-generator" style="width:100%; height:600px"></iframe>
+        <br><br><br>
+        <h3 style="text-align: center">The Vocal Qualities Generator</h3>
+        <p>This is another perchance-hosted generator, though a far less popular one at that. It's used to generate randomized vocal traits
+          in order to help the user come up with a unique voice for things such as games of Dungeons and Dragons or voice acting practice. As like
+          all other programs on this page, all programming in this generator is made from scratch by me.</p>
+        <p>Below here is an embeded version of the Vocal Qualities Generator in case you're interested in using it. However, if you'd like to
+          see the page itself, it is located <a href="https://null.perchance.org/vocal-qualities-generator">here.</a></p>
+        <iframe src="https://null.perchance.org/vocal-qualities-generator" style="width:100%; height:600px"></iframe>
+        <br><br><br>
+        <h3 style="text-align: center">Perchance Censorship Tool</h3>
+        <p>This is another program hosted on Perchance, though it isn't intended to function only as a randomized generator like this others. Since
+         all code on Perchance is open source and therefore able to be copied by anybody, this tool is meant to be used by others so that they can 
+         include a toggleable option for the user to censor swears in the generator's output. This is used on my Incorrect Quote Generator to allow
+         that very option.</p>
+        <p>The Perchance Censorship Tool is located <a href="https://null.perchance.org/censor-code-testing">here.</a></p>
+        <iframe src="https://null.perchance.org/censor-code-testing" style="width:100%; height:600px"></iframe>
+        <br><br><br>
+        <h3 style="text-align: center">This Website!</h3>
+        <p>This website is my first proper foray into html (the programming language which is used to make most websites). Though my perchance projects
+          have allowed me to get a taste of it, this website has allowed me to dig deeper into the possible functions and methods of html
+          programming by giving me a space to work with things such as tabs and embedded content.</p>
+    </body>
   </div>
   
   <!-- Origami tab content -->
   <div id="Origami" class="tabcontent">
     <div class="pageHead">Origami</div>
+    <body style="padding: 20px">
+      Welcome to my projects page!
+    </body>
   </div>
 
   <!-- Tab functionality -->
